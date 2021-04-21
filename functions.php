@@ -63,10 +63,20 @@
             'id'            => 'page_sidebar',
             'description'   => 'This is Page Sidebar'
         ]);
+        register_sidebar([
+            'name'          => 'Footer Menu',
+            'id'            => 'footer_sidebar',
+            'description'   => 'This is Footer Options'
+        ]);
         
         register_widget('about_us_zitaly');
         register_widget('populer_food_zitaly');
         register_widget('gallery_zitaly');
+        
+        register_widget('about_zitaly');
+        register_widget('map_zitaly');
+        register_widget('shedule_zitaly');
+
     }
 
     
@@ -102,3 +112,6 @@
     require_once "framework/widget/about.php";
     require_once "framework/widget/populer_food.php";
     require_once "framework/widget/gallery_zitaly.php";
+    require_once "framework/widget/about_zitaly.php";
+    require_once "framework/widget/map_zitaly.php";
+    require_once "framework/widget/shedule_zitaly.php";

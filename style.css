@@ -58,3 +58,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
     font-size: 23px !important;
     color: black !important;
 }
+footer img {
+    width: 30% !important;
+}
