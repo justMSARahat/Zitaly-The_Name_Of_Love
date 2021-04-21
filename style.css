@@ -47,3 +47,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
     display: block;
     padding: 10px; 
 }
+.widget_tag_cloud{
+    list-style: none !important;
+    
+}
+.widget_tag_cloud h2 {
+    display: inline-block !important;
+    padding: 20px 10px 20px 0 !important;
+    margin-bottom: -4px !important;
+    font-size: 23px !important;
+    color: black !important;
+}

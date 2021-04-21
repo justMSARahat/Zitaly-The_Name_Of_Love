@@ -45,6 +45,7 @@
                 </div>
                 <div id="sidebar" class="col-1-3">
                     <?php dynamic_sidebar('page_sidebar');?>
+                    <?php get_sidebar()?>
                 </div>
         <?php } ?>
     </div>

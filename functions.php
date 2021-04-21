@@ -43,6 +43,18 @@
             'menu_icon'         => 'dashicons-food',
         ]);
 
+        register_post_type( 'gallery', [
+            'public'            => true,
+            'labels'            => [
+                'name'          => 'Zitaly Gallery',
+                'add_new'       => 'Add New Gallery',
+                'all_items'     => 'All Gallery',
+                'add_new_item'  => 'Add New Gallery',
+            ],
+            'supports'          => ['title','thumbnail'],
+            'menu_icon'         => 'dashicons-format-image',
+        ]);
+
     }
     add_action( 'widgets_init','sidebar' );
     function sidebar(){
@@ -54,6 +66,7 @@
         
         register_widget('about_us_zitaly');
         register_widget('populer_food_zitaly');
+        register_widget('gallery_zitaly');
     }
 
     
@@ -88,3 +101,4 @@
     //Widgets
     require_once "framework/widget/about.php";
     require_once "framework/widget/populer_food.php";
+    require_once "framework/widget/gallery_zitaly.php";
