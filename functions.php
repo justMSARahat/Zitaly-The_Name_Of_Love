@@ -42,6 +42,13 @@
             'supports'          => ['title','thumbnail'],
             'menu_icon'         => 'dashicons-food',
         ]);
+        register_taxonomy('food_category','menu',[
+            'public'            => true,
+            'hierarchical'      => true,
+            'labels'            => [
+                'name'          => 'Food Category',
+            ],
+        ]);
 
         register_post_type( 'gallery', [
             'public'            => true,
@@ -115,3 +122,6 @@
     require_once "framework/widget/about_zitaly.php";
     require_once "framework/widget/map_zitaly.php";
     require_once "framework/widget/shedule_zitaly.php";
+
+    //Visual Composer Pages
+    require_once "framework/shortcode/menupage.php";

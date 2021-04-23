@@ -66,8 +66,9 @@ function zItalyFood_register_required_plugins() {
 		],
 
 		[
-			'name'		=> 'Faker Press',
-			'slug'		=> 'fakerpress',
+			'name'		=> 'Visual Composer',
+			'slug'		=> 'js_composer',
+			'source'	=> get_template_directory_uri().'/framework/tgm/plugins/js_composer.zip',
 			'required'	=> true,
 		],
 

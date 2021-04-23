@@ -14,7 +14,6 @@ class shedule_zitaly extends WP_Widget{
 
     ?>
 
-
     <div class="col-1-3">
         <div class="wrap-col">
             <h4><?php echo $title;?></h4>
