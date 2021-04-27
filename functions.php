@@ -31,6 +31,21 @@
 
         ]);
 
+        register_post_type('zitaly_news',[
+            'public'            => true,
+            'labels'            => [
+
+                'name'          => 'Zitaly News',
+                'add_new'       => 'Add New News',
+                'all_items'     => 'All News',
+                'add_new_item'  => 'Add New News',
+
+            ],
+            'supports'          => ['title','editor','thumbnail'],
+            'menu_icon'         => 'dashicons-news'
+
+        ]);
+
         register_post_type( 'menu', [
             'public'            => true,
             'labels'            => [
@@ -95,7 +110,7 @@
         wp_enqueue_style( 'zitaly-style',get_template_directory_uri().'/css/style.css' ); 
         wp_enqueue_style( 'zitaly-slide',get_template_directory_uri().'/css/slide.css' ); 
         wp_enqueue_style( 'zitaly-menu',get_template_directory_uri().'/css/menu.css' ); 
-        wp_enqueue_style( 'zitaly-menu',get_template_directory_uri().'/font-awesome/css/font-awesome.css' ); 
+        wp_enqueue_style( 'zitaly-cdn',get_template_directory_uri().'/font-awesome/css/font-awesome.css' ); 
         wp_enqueue_style( 'zitaly-theme_style',get_stylesheet_uri() ); 
 
         wp_enqueue_script( 'jquery' );
@@ -125,3 +140,9 @@
 
     //Visual Composer Pages
     require_once "framework/shortcode/menupage.php";
+    require_once "framework/shortcode/ourstuff.php";
+    require_once "framework/shortcode/zitaly_news.php";
+    require_once "framework/shortcode/zitaly_gallery.php";
+    require_once "framework/shortcode/zitaly_map.php";
+    require_once "framework/shortcode/zitaly_map_info.php";
+    require_once "framework/shortcode/zitaly_featured.php";
