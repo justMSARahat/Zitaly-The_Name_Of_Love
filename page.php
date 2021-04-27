@@ -1,4 +1,36 @@
 <?php get_header(); ?>
+<?php
+if(is_front_page() ){ ?>
+    <div class="zerogrid">
+        <div class="callbacks_container">
+            <ul class="rslides" id="slider4">
+            
+                <?php
+                    $slide       = new WP_Query([
+                        'post_type'     => 'slider',
+                        'posts_per_page' => 3,
+                    ]);
+                    while( $slide->have_posts() ): $slide->the_post(); 
+                ?>    
+
+                <li>
+                    <?php the_post_thumbnail();?>
+                    <div class="caption">
+                        <h2><?php the_title();?></h2></br>
+                        <p><?php echo wp_trim_words(get_the_content(),10,false ); ?></p>    
+                    </div>
+                </li>
+
+                <?php endwhile; ?>
+            </ul>
+        </div>
+    </div>
+    
+
+
+
+    
+<?php } ?>
 <section id="container" class="sub-page">
     <div class="wrap-container zerogrid">
 
@@ -28,6 +60,7 @@
                     </div>
                 </div>
             </section>
+            
     <?php }
     ?>
 

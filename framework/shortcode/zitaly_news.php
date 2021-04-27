@@ -12,7 +12,7 @@
 
         <?php
             $news       = new WP_Query([
-                'post_type'     => 'zitaly_news',
+                'post_type'     => 'slider',
                 'posts_per_page' => 1,
             ]);
             while( $news->have_posts() ): $news->the_post(); 

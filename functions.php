@@ -65,6 +65,31 @@
             ],
         ]);
 
+        register_post_type( 'featured', [
+            'public'            => true,
+            'labels'            => [
+                'name'          => 'Zitaly Feature Post',
+                'add_new'       => 'Add New Feature Post',
+                'all_items'     => 'All Feature Post',
+                'add_new_item'  => 'Add New Feature Post',
+            ],
+            'supports'          => ['title','editor','thumbnail'],
+            'menu_icon'         => 'dashicons-food',
+        ]);
+
+        register_post_type( 'slider', [
+            'public'            => true,
+            'labels'            => [
+                'name'          => 'Zitaly Slider',
+                'add_new'       => 'Add New Slider',
+                'all_items'     => 'All Slider',
+                'add_new_item'  => 'Add New Slider',
+            ],
+            'supports'          => ['title','editor','thumbnail'],
+            'menu_icon'         => 'dashicons-food',
+        ]);
+        
+
         register_post_type( 'gallery', [
             'public'            => true,
             'labels'            => [
@@ -116,6 +141,9 @@
         wp_enqueue_script( 'jquery' );
         wp_enqueue_script( 'zitaly-classie',get_template_directory_uri().'/js/classie.js',['jquery'],true,true );
         wp_enqueue_script( 'zitaly-demo',get_template_directory_uri().'/js/demo.js',['jquery','zitaly-classie'],true,true );
+        wp_enqueue_script( 'zitaly-slider',get_template_directory_uri().'/js/responsiveslides.min.js',['jquery','zitaly-classie','zitaly-demo'],true,true );
+        wp_enqueue_script( 'zitaly-dev_slider',get_template_directory_uri().'/js/dev_slilder.js',['jquery','zitaly-classie','zitaly-slider'],true,true );
+
 
     }
 
@@ -146,3 +174,5 @@
     require_once "framework/shortcode/zitaly_map.php";
     require_once "framework/shortcode/zitaly_map_info.php";
     require_once "framework/shortcode/zitaly_featured.php";
+
+    
