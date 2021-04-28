@@ -17,7 +17,7 @@ if(is_front_page() ){ ?>
                     <?php the_post_thumbnail();?>
                     <div class="caption">
                         <h2><?php the_title();?></h2></br>
-                        <p><?php echo wp_trim_words(get_the_content(),10,false ); ?></p>    
+                        <p><?php echo wp_trim_words(get_the_content(),50 ); ?></p>    
                     </div>
                 </li>
 
@@ -30,8 +30,16 @@ if(is_front_page() ){ ?>
 
 
     
-<?php } ?>
-<section id="container" class="sub-page">
+<?php } 
+    if( !is_front_page() ){ ?>
+        <section id="container" class="sub-page">
+    <?php }
+    else{ ?>
+        <section id="container" class="sub-page" style="margin-top: 0px !important;">
+    <?php }
+?>
+
+
     <div class="wrap-container zerogrid">
 
     <?php 

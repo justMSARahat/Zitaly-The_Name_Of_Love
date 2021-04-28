@@ -174,5 +174,7 @@
     require_once "framework/shortcode/zitaly_map.php";
     require_once "framework/shortcode/zitaly_map_info.php";
     require_once "framework/shortcode/zitaly_featured.php";
+    require_once "framework/shortcode/reservation_info.php";
+    require_once "framework/shortcode/reservation_form.php";
 
     

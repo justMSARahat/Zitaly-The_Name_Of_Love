@@ -16,7 +16,7 @@
                 <?php
                     $gallery    = new WP_Query([
                         'post_type'     => 'gallery',
-                        'posts_per_page'=> 7,
+                        'posts_per_page'=> 6,
                     ]);
                     while($gallery->have_posts()) :  $gallery->the_post();
                     ?>

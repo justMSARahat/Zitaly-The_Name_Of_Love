@@ -1,4 +1,3 @@
-
 <?php
     add_shortcode( 'news_scode','news_scode' );
     function news_scode( $one,$two ){ 
@@ -12,7 +11,7 @@
 
         <?php
             $news       = new WP_Query([
-                'post_type'     => 'slider',
+                'post_type'     => 'zitaly_news',
                 'posts_per_page' => 1,
             ]);
             while( $news->have_posts() ): $news->the_post(); 

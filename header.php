@@ -1,3 +1,6 @@
+<?php
+	global $zitaly;
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -25,28 +28,28 @@
 	<div class="top">
 		<div class="zerogrid">
 			<ul class="number f-left">
-				<li class="mail"><p>ContacUst@Gmail.com</p></li>
-				<li class="phone"><p>08 88888 88888</p></li>
+				<li class="mail"><p><?php echo $zitaly['email'];?></p></li>
+				<li class="phone"><p><?php echo $zitaly['mobile'];?></p></li>
 			</ul>
 			<ul class="top-social f-right">
-				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-				<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-				<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-				<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="<?php echo $zitaly['twitter'];?>"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="<?php echo $zitaly['facebook'];?>"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="<?php echo $zitaly['google'];?>"><i class="fa fa-google-plus"></i></a></li>
+				<li><a href="<?php echo $zitaly['linkedin'];?>"><i class="fa fa-linkedin"></i></a></li>
+				<li><a href="<?php echo $zitaly['instagram'];?>"><i class="fa fa-instagram"></i></a></li>
 			</ul>
 		</div>
 	</div>
 	<!--////////////////////////////////////Header-->
 	<header>
 		<div class="zerogrid">
-			<center><div class="logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png"></div></center>
+			<center><div class="logo"><img src="<?php echo $zitaly['logo']['url']; ?>"></div></center>
 		</div>
 	</header>
 	<div class="site-title">
 		<div class="zerogrid">
 			<div class="row">
-				<h2 class="t-center">Truely the best restaurant in town - The New York Times</h2>
+				<h2 class="t-center"><?php echo $zitaly['slogan'];?></h2>
 			</div>
 		</div>
 	</div>

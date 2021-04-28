@@ -1,4 +1,7 @@
 <!--////////////////////////////////////Footer-->
+<?php
+	global $zitaly;
+?>
 <footer class="zerogrid">
 	<div class="wrap-footer">
 		<div class="row">
@@ -37,10 +40,10 @@
 	</div>
 	<div class="copyright">
 		<div class="wrapper">
-			Copyright 2015 - Designed by <a href="https://www.zerotheme.com" title="free website templates">ZEROTHEME</a>
+		<?php echo $zitaly['copywrite'];?>
 			<ul class="quick-link f-right">
-				<li><a href="#">Privacy Policy</a></li>
-				<li><a href="#">Terms of Use</a></li>
+				<li><a href="<?php echo $zitaly['policy'];?>">Privacy Policy</a></li>
+				<li><a href="<?php echo $zitaly['terms'];?>">Terms of Use</a></li>
 			</ul>
 		</div>
 	</div>

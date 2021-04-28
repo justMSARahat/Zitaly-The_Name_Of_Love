@@ -35,7 +35,7 @@
 			</div>
 		</div>
 		<div id="sidebar" class="col-1-3">
-			<?php get_sidebar();?>
+			<?php dynamic_sidebar( 'page_sidebar' );?>
 		</div>
 	</div>
 </section>
